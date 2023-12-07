@@ -1,0 +1,98 @@
+package firstapptut;
+import java.util.*;
+
+
+
+class Guesss{
+	int guessnumb;
+	// process to guess the number for guesser side
+	int guessnum(){
+		/*Scanner s= new Scanner(System.in);
+		System.out.println("Guesser pleas guess number");
+		guessnumb= s.nextInt();
+		return guessnumb;*/
+		int min= 5;
+		int max = 10;
+		int guessnumb= (int )Math.floor(Math.random()*(max-min+1)+min);
+		
+		return guessnumb;
+	}
+}
+class player{
+	int guess;
+	int guessno(){
+	
+		Scanner s= new Scanner(System.in);
+		
+		System.out.println("player please guess the  number");
+		guess = s.nextInt();
+		return guess;
+		
+	}
+}
+class umpire{
+	int numfromguesser;
+	int numfromp1;
+	int numfromp2;
+	int numfromp3;
+	// task that umpire do
+	void collectnuofromGuesser() {
+		Guesss g= new Guesss();
+		numfromguesser=g.guessnum();
+	}
+	void collectnuofromPlayers() {
+		player p1 = new player();
+		player p2 = new player();
+		player p3 = new player();
+		numfromp1 = p1.guessno();
+		numfromp2 = p2.guessno();
+		numfromp3 = p3.guessno();
+		
+		
+		
+	}
+	void compair() {
+		
+		if(numfromguesser== numfromp1) {
+			
+			if(numfromguesser== numfromp2 && numfromguesser== numfromp3) {
+				System .out.println("All are won the  game");
+			}
+			else if(numfromguesser== numfromp2) {
+				System.out.println("player 1 and 2 win the game");
+			}
+			else if(numfromguesser== numfromp3) {
+				System.out.println(" player 1 and 3 own");
+				
+			}else {
+			System.out.println("Player 1 own game");
+		}
+		}
+		else if(numfromguesser==numfromp2) {
+			if(numfromguesser== numfromp3) {
+				System.out.println("player 2 and 3 owns the  game");
+			}else {
+				
+			System.out.println("player 2 own game");
+			}
+		}
+		else if(numfromguesser==numfromp3) {
+			System.out.println("player 3 own game");
+			
+		}
+		else {
+			System.out.println("game loss try again");
+		}
+		
+	}
+}
+public class Guesser {
+	public static void main(String[]args) {
+		System.out.println(" All 3 player please guess the  number 5-10");
+		umpire p= new umpire();
+		p.collectnuofromGuesser();
+		p.collectnuofromPlayers();
+		p.compair();
+	}
+
+}

@@ -23,6 +23,8 @@ int maxRange = 100;
 
 // Number of players
 int numberOfPlayers = 3;
+
+
 Sample Output:
 The game will display messages indicating the progress and outcome of each round. Here's an example:
 
@@ -39,6 +41,7 @@ Player 2, your guess is incorrect.
 Player 3, your guess is incorrect.
 
 No winners this round. Better luck next time!
+
 
 Contributions:
 Feel free to contribute to this project by opening issues or submitting pull requests. If you have ideas for improvements, bug fixes, or new features, we welcome your input.

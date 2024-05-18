@@ -23,7 +23,7 @@ int maxRange = 100;
 
 // Number of players
 int numberOfPlayers = 3;
-
+author jay Bele
 
 Sample Output:
 The game will display messages indicating the progress and outcome of each round. Here's an example:
